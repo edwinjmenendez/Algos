@@ -17,10 +17,11 @@ const removeDuplicates = nums => {
     if (nums[i] === nums[i+1] || nums[i] === nums[i-1]) {
       nums.splice(i, 1)
       console.log(nums)
+      i = i - 1;
     }
   }
   // return length of array
   return nums.length;
 };
 
-console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4,4,4,4,4,4,4]));
+console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,3,3,3,4,4,4,4,4,4,4,5,5,5,5,5,5]));
